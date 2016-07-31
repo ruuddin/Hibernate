@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+              http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+ 
+    <persistence-unit name="utiljpa">
+        <!-- This next node should be included for use of the Hibernate provider in
+             A Java EE environment in which Hibernate is not the default. -->
+        <!--
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        -->
+        <properties>
+            <!-- Properties prefixed with “javax” are part of the JPA specification.
+                 Hibernate will use them as it can.
+                 Properties prefixed with “hibernate” are passed to the Hibernate
+                 provider, and map to the standard hibernate properties.
+            -->
+            <property name="javax.persistence.jdbc.driver"
+                value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+            <property name="javax.persistence.jdbc.url"
+                value="jdbc:sqlserver://localhost:1433;databaseName=test;responseBuffering=adaptive"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value="escape10FLEX"/>
+            <property name="hibernate.dialect"
+                value="org.hibernate.dialect.SQLServerDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>

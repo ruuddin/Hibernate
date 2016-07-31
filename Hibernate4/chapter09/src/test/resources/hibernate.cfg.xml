@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd
+">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+		<property name="connection.url">jdbc:sqlserver://localhost:1433;databaseName=test;responseBuffering=adaptive</property>
+		<property name="connection.username">sa</property>
+		<property name="connection.password">escape10FLEX</property>
+		<!-- property name="jndi.url">java:jboss/datasources/ExampleDS</property -->
+		<property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">create</property>
+		<property name="c3p0.timeout">10</property>
+		<mapping class="chapter09.namedquery.Supplier" />
+		<mapping class="chapter09.namedquery.Product" />
+		<mapping class="chapter09.namedquery.Software" />
+	</session-factory>
+</hibernate-configuration>

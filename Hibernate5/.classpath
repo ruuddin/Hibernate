@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="c04-jpa/src/main/java"/>
+	<classpathentry kind="src" path="c04-jpa/src/test/java"/>
+	<classpathentry kind="src" path="chapter12/src/main/java"/>
+	<classpathentry kind="src" path="chapter12/src/test/java"/>
+	<classpathentry kind="lib" path="c04-jpa/target/c04-jpa-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="chapter12/target/chapter12-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="chapter12/target/chapter12-1.0.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="c04-jpa/target/classes"/>
+</classpath>
